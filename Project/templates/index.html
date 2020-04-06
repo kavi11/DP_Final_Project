@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="myPage">
+
+	<head>
+
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<meta charset="utf-8">
+
+		<!-- <link href="../static/css/main.css" rel="stylesheet" type="text/css" /> -->
+
+		<!-- SUPPORT FOR IE6-8 OF HTML5 ELEMENTS -->
+		<!--[if lt IE 9]>
+					<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+
+		<!-- <link rel="shortcut icon" href="{{ url_for('static', filename='ico/favicon.ico') }}"> -->
+		{% block head %}
+			<title>{% block title %} Title!{% endblock %}</title>
+		{% endblock %}
+	</head>
+
+	<body>
+		<body id="myPage">
+
+			<!-- Sidebar on click -->
+			<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+			  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+				<i class="fa fa-remove"></i>
+			  </a>
+			  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+			  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+			  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+			  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+			  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+			</nav>
+			
+			<!-- Navbar -->
+			<div class="w3-top">
+			 <div class="w3-bar w3-theme-d2 w3-left-align">
+			  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+			  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-python w3-margin-right"></i>Data Programming </a>
+			  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+			  <a href="#LineChart" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Line Chart</a>
+			  <a href="index3.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Bar Chart</a>
+			  <a href="index2.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Pie Chart</a> 
+			  <a href="#Tools" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Technology</a>
+				<!-- <div class="w3-dropdown-hover w3-hide-small">
+				<button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>     
+				<div class="w3-dropdown-content w3-card-4 w3-bar-block">
+				  <a href="#" class="w3-bar-item w3-button">Bar Chart</a>
+				  <a href="#" class="w3-bar-item w3-button">Line Chart</a>
+				  <a href="#" class="w3-bar-item w3-button">Pie Chart</a>
+				</div>
+			  </div> -->
+			  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+			 </div>
+			
+			  <!-- Navbar on small screens -->
+			  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+				<a href="#team" class="w3-bar-item w3-button">Team</a>
+				<a href="#work" class="w3-bar-item w3-button">Work</a>
+				<a href="#LineChart" class="w3-bar-item w3-button">Line Chart</a>
+				<a href="#BarChart" class="w3-bar-item w3-button">Bar Chart</a>
+				<a href="#PieChart" class="w3-bar-item w3-button">Pie Chart</a>
+				<a href="#" class="w3-bar-item w3-button">Search</a>
+			  </div>
+			</div>
+			
+			<!-- Image Header -->
+			<div class="w3-display-container w3-animate-opacity">
+			  <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F28%2F2017%2F11%2Fflight-landing-INBNDCHECK1117.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+			  <div class="w3-container w3-display-left w3-margin-bottom">  
+				<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go to Data World">Airport Traffic Passenger Statistic</button>
+			  </div>
+			</div>
+			
+			<!-- Modal -->
+			<div id="id01" class="w3-modal">
+			  <div class="w3-modal-content w3-card-4 w3-animate-top">
+				<header class="w3-container w3-teal w3-display-container"> 
+				  <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+				  <h4>Dataset References</h4>
+				</header>
+				<div class="w3-container">
+				  <p>Go on this site <a class="w3-text-teal" href="https://data.world/data-society/air-traffic-passenger-data">Air Traffic Passenger Statistic</a></p>
+				</div>
+				<footer class="w3-container w3-teal">
+				</footer>
+			  </div>
+			</div>
+
+			<!-- Modal -->
+			<div id="id02" class="w3-modal">
+				<div class="w3-modal-content w3-card-4 w3-animate-top">
+				  <header class="w3-container w3-teal w3-display-container"> 
+					<span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+					<h4>Analysis Details</h4>
+				  </header>
+				  <div class="w3-container">
+					<p>The Trend of the passenger departing and arriving at San Francisco Aiport from 2005 to 2016. The trend shows that the number of passenger rose around 6% every year. 
+						2015 reached the peak of 50 Millions Passenger and are expected to climbed up every coming year<a class="w3-text-teal" ></a></p>
+				  </div>
+				  <footer class="w3-container w3-teal">
+				  </footer>
+				</div>
+			  </div>		
+			
+			<!-- Team Container -->
+			<div class="w3-container w3-padding-64 w3-center" id="team">
+			<h2>OUR TEAM</h2>
+			<p>Meet the team - Data Programming:</p>
+			
+			<div class="w3-row"><br>
+			
+			<div class="w3-quarter">
+			  <img src="https://media-exp1.licdn.com/dms/image/C4E03AQHh4h1s5GU71A/profile-displayphoto-shrink_200_200/0?e=1591833600&v=beta&t=gA0gVAx6Ff8GL8U850ZyQo87vUNwY_Da_5uAK8-I-ng" style="width:40%" class="w3-circle w3-hover-opacity">
+			  <h3>Kavya Arora</h3>
+			  <p>Web Developer</p>
+			</div>
+			
+			<div class="w3-quarter">
+			  <img src="https://media-exp1.licdn.com/dms/image/C5103AQHkE31dAyQWig/profile-displayphoto-shrink_200_200/0?e=1591833600&v=beta&t=pO9t31wDhWlC2HsfLUoJXRBhzzca1G0iOtTUwjacrSc"  style="width:40%" class="w3-circle w3-hover-opacity">
+			  <h3>Kaviraj Singh</h3>
+			  <p>Data Analyst</p>
+			</div>
+			
+			<div class="w3-quarter">
+			  <img src="https://media-exp1.licdn.com/dms/image/C5103AQGLEJCnMOwhZw/profile-displayphoto-shrink_200_200/0?e=1591833600&v=beta&t=0-dL4zZYNm5RNkUsgYiOBnhznsH3jancDpLKh8sLl8A" style="width:40%" class="w3-circle w3-hover-opacity">
+			  <h3>Gurminder Singh</h3>
+			  <p>Backend Developer</p>
+			</div>
+			
+			<div class="w3-quarter">
+			  <img src="https://serving.photos.photobox.com/88744354aa2b2b0f5f80044fb8e7f9aaa451ac158c088d2869594fbb84166db79ac42538.jpg"  style="width:40%" class="w3-circle w3-hover-opacity">
+			  <h3>Sargun Singh</h3>
+			  <p>Business Analyst</p>
+			</div>
+			
+			</div>
+			</div>
+			
+			<!-- Line Chart -->
+			<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="LineChart">
+				<div class="w3-container">  
+					<button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go To Analysis">Chart Analysis</button>
+				  </div>
+			<div class="w3-quarter">
+			<h2>Line Chart</h2>
+			<p>The Trend of the passenger departing and arriving at San Francisco Aiport from 2005 to 2016. The trend shows that the number of passenger rose around 6% every year
+				Airport traffic data is a monthly and annual basis to provide airports, stakeholders, Airlines and World business partners with the information and tools they need to better understand aviation trends and forecasts for the coming years
+			</p>
+			<br>
+		</div>
+			
+			<div class="w3-quarter">
+			  <div class="w3-container">
+				<div id={{ chartID|safe }} class="chart" style="height: 500px; width: 600px"></div>
+				<script>
+					var chart_id = {{ chartID|safe }}
+					var series = {{ series|safe }}
+					var title = {{ title|safe }}
+					var xAxis = {{ xAxis|safe }}
+					var yAxis = {{ yAxis|safe }}
+					var chart = {{ chart|safe }}
+				</script>
+					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+					<script src="http://code.highcharts.com/highcharts.js"></script>
+					<script src="../static/js/main.js"></script>
+			  </div>
+			  </div>
+			  
+			</div>
+			
+			</div>
+
+			<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="Tools">
+	<div class="w3-row">
+	  <div class="w3-col m5">
+	  <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Technology</span></div>
+		<h3>Tools and Programming Language</h3>
+		<p>1. Python</p>
+		<p>2. Javascript</p>
+		<p>3. HTML</p>
+		<p>4. Visual Studio Code</p>
+		<p>5. SQL Server Management Studio</p>
+		<p>6. SQL</p>
+	  </div>
+	</div>
+  </div>
+			<!-- Image of location/map -->
+			<!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%;">  -->
+			
+			<!-- Footer -->
+			<!-- <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+			  <h4>Follow Us</h4>
+			  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+			  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+			  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+			  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+			  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+			  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+			
+			  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+				<span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+				<a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+				<i class="fa fa-chevron-circle-up"></i></span></a>
+			  </div>
+			</footer> -->
+			 
+			<script>
+			// Script for side navigation
+			function w3_open() {
+			  var x = document.getElementById("mySidebar");
+			  x.style.width = "300px";
+			  x.style.paddingTop = "10%";
+			  x.style.display = "block";
+			}
+			
+			// Close side navigation
+			function w3_close() {
+			  document.getElementById("mySidebar").style.display = "none";
+			}
+			
+			// Used to toggle the menu on smaller screens when clicking on the menu button
+			function openNav() {
+			  var x = document.getElementById("navDemo");
+			  if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			  } else { 
+				x.className = x.className.replace(" w3-show", "");
+			  }
+			}
+			</script>
+			<img src="https://moafconsulting.com/education/wp-content/uploads/2019/04/university-bannerGeorgian-College.png" class="w3-image w3-greyscale-min" style="width:100%;">
+
+			<!-- Footer -->
+			<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+			  <h4>Follow Us</h4>
+			  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+			  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+			  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+			  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+			  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+			  <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> -->
+			
+			  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+				<span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+				<a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+				<i class="fa fa-chevron-circle-up"></i></span></a>
+			  </div>
+			</footer>
+			</body>
+	</body>
+</html>
